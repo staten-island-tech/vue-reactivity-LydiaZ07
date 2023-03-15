@@ -5,6 +5,8 @@
     <ul>
       <li v-for="animal in animals" :key="animal">{{ animal }}</li>
     </ul>
+    <button @click="authState" v-if="loggedIn">Log Out</button>
+    <button v-on:click="authState" v-else>Login</button>
   </div>
 </template>
 
@@ -16,14 +18,25 @@ export default {
   data(){
     return {
       student: "Harry",
-      graduated: false,
+      graduated: true,
       animals: ["pig", "horse", "donkey", "capybara", "raccoon", "duck"],
+      loggedIn: false,
     };
   },
+  methods: {
+    authState: function () {
+      if(this.loggedIn===false){
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+    }
+  },
+  }
 };
 
 </script>
 
+<!-- project should have 2 word components -->
 
 
 
