@@ -27,6 +27,22 @@ export default {
       message: "hello world",
       count: 0,
     };
+    return
+      cards:[
+        {
+          name:Cat,
+          description:fluffy,
+          price: 33,
+    
+        },
+        {
+          name:Dog,
+          desciption:cute,
+          price:36,
+        }
+      ]
+      
+    
   },
   methods: {
     authState: function () {
