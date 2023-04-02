@@ -2,13 +2,14 @@
   <div class="home">
  
     <h1>hi</h1>
-  <div class="cards">
+  <div class="cards">   
+
     <Card v-for="(product, index) in products"
     :key="index"
     :title="product.name"
     :cost="product.cost"
-    :img="product.img">
-    </Card>
+    :image="product.img">
+  </Card>
   </div>
     
   </div>  
@@ -117,11 +118,39 @@ counts: function(){
 </script>
 
 <style>
-.home{
-  width:30%;
-  background-color: pink;
-  height: 500px;
+
+body, html, {
+  margin: 0;
+  padding: 0;
+
 }
+
+#app{
+  width: 100%;
+  overflow:hidden;
+}
+.wrapper{
+  width:100%;
+}
+
+.home{
+  width:200%;
+  background-color: pink;
+}
+
+.cards{
+background-color: red;
+margin: 2rem;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+
+}
+
+.card-img{
+  width: 10rem;
+  }
 </style>
 
 
