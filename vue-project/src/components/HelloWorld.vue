@@ -40,7 +40,8 @@ export default {
   },
         
   data(){
-    return {      
+    return {   
+      total:0,   
       page: "products",
       cart: [],
       products: [
@@ -153,7 +154,7 @@ body, html, {
 
 .head{
   font-size: 20px;
-  background-color: green;
+  background-color: lightcoral;
   text-align: right;
   box-shadow: 2px 2px 5px red;
   padding: 1rem;
@@ -188,5 +189,6 @@ flex-wrap: wrap;
 
 <!-- project should have 2 word components -->
 
-
+<!-- this.cost.push(this.products[product].cost)
+      this.orderTotal = this.orderTotal + this.products[product].cost -->
 
